@@ -40,7 +40,7 @@ class Main extends PluginBase{
             foreach($servers as $server) {
                 if($server['name'] == $name) {
                     
-                    $sender->sendMessage("§6Taking you to " . $server['ip'] . ":" . $server['port']);
+                    $sender->sendMessage("§6Taking you to " . $server['name']);
                     if ($sender instanceof Player) {
                         $sender->transfer($server['ip'], $server['port']);
                         break;
