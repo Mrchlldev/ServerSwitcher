@@ -13,6 +13,7 @@ commands:
   server:
     description: Transfers you to a target server
     permission: serverswitcher.use
+    aliases: ["go", "goto", "transfer", "pergike"]
   servers:
     description: Display available servers
     permission: serverswitcher.use
