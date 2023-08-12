@@ -1,16 +1,4 @@
 servers:
   - name: "lobby"
-    ip: "play.osforce.my.id"
+    ip: "0.0.0.0"
     port: 19132
-  - name: "lobbyv1"
-    ip: "play.osforce.my.id"
-    port: 19137
-  - name: "economy"
-    ip: "play.osforce.my.id"
-    port: 19136
-  - name: "oneblock"
-    ip: "play.osforce.my.id"
-    port: 19135
-  - name: "skyblock"
-    ip: "play.osforce.my.id"
-    port: 19134
