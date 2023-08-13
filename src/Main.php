@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace iMD14\ServerSwitcher;
 
+use pocketmine\console\ConsoleCommandSender;
 use pocketmine\{
     command\Command,
     command\CommandSender,
@@ -35,6 +36,7 @@ class Main extends PluginBase{
             }
             $config = new Config($this->getDataFolder() . "servers.yml", Config::YAML);
             $servers = $config->get("servers");
+            $s = Server::getInstance();
 
             $name = $args[0];
             foreach($servers as $server) {
@@ -42,7 +44,7 @@ class Main extends PluginBase{
                     
                     $sender->sendMessage("§6Taking you to " . $server['name']);
                     if ($sender instanceof Player) {
-                        $sender->transfer($server['ip'], $server['port']);
+                        $s->dispatchCommand(new ConsoleCommandSender($server, $server->getLanguage()), "server " . $server["name"] . " " . $sender);
                         break;
                     } else {
                         $sender->sendMessage("§4An error occurred while trying to transfer you");
