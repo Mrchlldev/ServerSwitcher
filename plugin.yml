@@ -10,11 +10,11 @@ api:
 - 5.0.0
 src-namespace-prefix: iMD14\ServerSwitcher
 commands:
-  server:
+  servers:
     description: Transfers you to a target server
     permission: serverswitcher.use
-    aliases: ["go", "goto", "transfer", "pergike"]
-  servers:
+    aliases: ["go", "goto", "pergike"]
+  listserver:
     description: Display available servers
     permission: serverswitcher.use
   swrconfig:
