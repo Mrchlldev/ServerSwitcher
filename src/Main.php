@@ -29,7 +29,7 @@ class Main extends PluginBase{
 
   public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
     switch($command->getName()) {
-        case "server":
+        case "servers":
             if(count($args) !== 1) {
                 $sender->sendMessage("§4/server <name>");
                 return false;
@@ -56,7 +56,7 @@ class Main extends PluginBase{
             return false;
         default:
             return false;
-        case "servers":
+        case "listserver":
                 $this->serversConfig = new Config($this->getDataFolder() . "servers.yml", Config::YAML);
 
                 $serverData = $this->serversConfig->getAll()["servers"] ?? [];
